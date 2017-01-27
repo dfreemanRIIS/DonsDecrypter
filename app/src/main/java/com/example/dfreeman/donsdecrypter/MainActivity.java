@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
             String decrypted = decrypt("anVvMWVycyh5Pz5l");
             tv.append("username : " + decrypted + "\n");
 
-            decrypted = decrypt("c2ViKGV0cTtzc3Y1cmQ+ZQ==");
+            decrypted = decrypt("MnNkOXJldW5tZT5l");
             tv.append("password : " + decrypted + "\n");
 
 

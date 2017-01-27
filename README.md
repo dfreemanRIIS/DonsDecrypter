@@ -9,7 +9,7 @@
     <string name="com.match.android.user.lastcountry">VVM=</string>
     <null name="Online" />
     <null name="com.match.authtoken" />
-    <string name="com.match.password">c2ViKGV0cTtzc3Y1cmQ+ZQ==</string>
+    <string name="com.match.password">MnNkOXJldW5tZT5l</string>
     <null name="HaveKids" />
     <string name="EmailForLogin"></string>
     <int name="com.match.app.launch.counter" value="1" />
