@@ -1,6 +1,6 @@
 # DonsDecrypter
 
-## Decypting code found on Match.com app inside matchmobile_prefs.xml will yeild username and password:
+## Decrypting code found on Match.com app inside matchMobile_prefs.xml will yield username and password:
 
 ```XML
 <?xml version='1.0' encoding='utf-8' standalone='yes' ?>

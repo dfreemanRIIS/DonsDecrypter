@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public static String decrypt(String encrypted) {
+    private static String decrypt(String encrypted) {
         encrypted = new String(Base64.decode(encrypted, 0));
         byte[] l = null;
         try {
@@ -40,20 +40,25 @@ public class MainActivity extends AppCompatActivity {
                 i += 4;
             }
         } catch (Exception e) {
+            //
         }
-        encrypted = new String(l);
-        int index = encrypted.indexOf("?");
-        return index > 0 ? encrypted.substring(0, index) : encrypted;
+        if(l != null) {
+            encrypted = new String(l);
+            int index = encrypted.indexOf("?");
+            return index > 0 ? encrypted.substring(0, index) : encrypted;
+        } else {
+            return "null";
+        }
     }
 
-    public static void writeInt(byte[] data, int offset, int value) {
+    private static void writeInt(byte[] data, int offset, int value) {
         data[offset] = (byte) (value >> 24);
         data[offset + 1] = (byte) (value >> 16);
         data[offset + 2] = (byte) (value >> 8);
         data[offset + 3] = (byte) value;
     }
 
-    public static int readInt(byte[] data, int offset) {
+    private static int readInt(byte[] data, int offset) {
         return (((data[offset] << 24) | ((data[offset + 1] & 255) << 16)) | ((data[offset + 2] & 255) << 8)) | (data[offset + 3] & 255);
     }
 }
